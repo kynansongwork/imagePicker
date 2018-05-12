@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     let pickerController = UIImagePickerController()
     
@@ -21,6 +22,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        //Need to test on a device
+    }
+    
     @IBAction func pickImage(_ sender: Any) {
         pickerController.allowsEditing = false
         pickerController.sourceType = .photoLibrary
@@ -28,8 +34,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //used to present the image picker.
     }
     
+    @IBAction func cameraImage(_ sender: Any) {
+        pickerController.allowsEditing = false
+        pickerController.sourceType = .camera
+        present(pickerController, animated: true, completion: nil)
+    }
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            //Optional type so needs to be unwrapped.
             imagePickerView.contentMode = .scaleAspectFit
             //Tells the image to fit to the view.
             imagePickerView.image = pickedImage
