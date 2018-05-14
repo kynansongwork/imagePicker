@@ -12,12 +12,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var topTextBox: UITextField!
+    @IBOutlet weak var bottomTextBox: UITextField!
     
     let pickerController = UIImagePickerController()
+    let textViewDelegate = TextViewDelegate()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerController.delegate = self
+        topTextBox.delegate = textViewDelegate
+        bottomTextBox.delegate = textViewDelegate
+        
+        
+        imagePickerView.contentMode = .scaleAspectFit
+        topTextBox.textAlignment = .center
+        bottomTextBox.textAlignment = .center
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
