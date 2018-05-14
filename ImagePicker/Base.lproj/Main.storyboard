@@ -4,8 +4,9 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,14 +17,10 @@
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S10-VW-UUA">
-                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="tLP-xZ-e4z"/>
-                                    <constraint firstAttribute="height" constant="128" id="yhw-6E-ewB"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="170" width="375" height="327"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSt-Qb-cch">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -40,14 +37,34 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n93-gj-Ish">
+                                <rect key="frame" x="102" y="88" width="171" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAG-fx-HXw">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="171" id="AtI-Qg-FBt"/>
+                                            <constraint firstAttribute="height" constant="30" id="Pnl-V0-Is9"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WSt-Qb-cch" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QIk-nF-B2h"/>
-                            <constraint firstItem="S10-VW-UUA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eoP-Hc-Ojx"/>
-                            <constraint firstItem="WSt-Qb-cch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hRz-iL-o73"/>
-                            <constraint firstItem="WSt-Qb-cch" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="l0q-jV-bCq"/>
-                            <constraint firstItem="S10-VW-UUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skI-SS-TlA"/>
+                            <constraint firstItem="S10-VW-UUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7mn-X4-MsY"/>
+                            <constraint firstItem="n93-gj-Ish" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7qr-ik-Rja"/>
+                            <constraint firstItem="S10-VW-UUA" firstAttribute="firstBaseline" secondItem="lAG-fx-HXw" secondAttribute="baseline" constant="11" symbolType="layoutAnchor" id="ENK-S4-e7s"/>
+                            <constraint firstItem="S10-VW-UUA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FC8-fr-nEo"/>
+                            <constraint firstItem="S10-VW-UUA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Hyf-tD-5r2"/>
+                            <constraint firstItem="S10-VW-UUA" firstAttribute="leading" secondItem="WSt-Qb-cch" secondAttribute="leading" id="cNa-kD-jci"/>
+                            <constraint firstItem="WSt-Qb-cch" firstAttribute="top" secondItem="S10-VW-UUA" secondAttribute="bottom" constant="126" id="cRA-JI-r8a"/>
+                            <constraint firstItem="lAG-fx-HXw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="ffZ-4Y-dVy"/>
+                            <constraint firstItem="S10-VW-UUA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iYT-10-Mud"/>
+                            <constraint firstItem="S10-VW-UUA" firstAttribute="trailing" secondItem="WSt-Qb-cch" secondAttribute="trailing" id="vHe-wi-GRu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -58,6 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>

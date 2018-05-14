@@ -12,6 +12,7 @@
 		ED48C2E420A5EB49006FBDA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED48C2E220A5EB49006FBDA9 /* Main.storyboard */; };
 		ED48C2E620A5EB4B006FBDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED48C2E520A5EB4B006FBDA9 /* Assets.xcassets */; };
 		ED48C2E920A5EB4B006FBDA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED48C2E720A5EB4B006FBDA9 /* LaunchScreen.storyboard */; };
+		ED48C2F220A9B493006FBDA9 /* TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48C2F120A9B493006FBDA9 /* TextViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		ED48C2E520A5EB4B006FBDA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED48C2E820A5EB4B006FBDA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED48C2EA20A5EB4C006FBDA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED48C2F120A9B493006FBDA9 /* TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		ED48C2DD20A5EB49006FBDA9 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				ED48C2F020A97878006FBDA9 /* ViewDelegates */,
 				ED48C2DE20A5EB49006FBDA9 /* AppDelegate.swift */,
 				ED48C2E020A5EB49006FBDA9 /* ViewController.swift */,
 				ED48C2E220A5EB49006FBDA9 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				ED48C2EA20A5EB4C006FBDA9 /* Info.plist */,
 			);
 			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		ED48C2F020A97878006FBDA9 /* ViewDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				ED48C2F120A9B493006FBDA9 /* TextViewDelegate.swift */,
+			);
+			path = ViewDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED48C2F220A9B493006FBDA9 /* TextViewDelegate.swift in Sources */,
 				ED48C2E120A5EB49006FBDA9 /* ViewController.swift in Sources */,
 				ED48C2DF20A5EB49006FBDA9 /* AppDelegate.swift in Sources */,
 			);
@@ -213,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -281,12 +293,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZSM2D4RUSA;
 				INFOPLIST_FILE = ImagePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.ImagePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = test.ImagePickerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,12 +311,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZSM2D4RUSA;
 				INFOPLIST_FILE = ImagePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.ImagePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = test.ImagePickerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +334,7 @@
 				ED48C2EC20A5EB4C006FBDA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		ED48C2ED20A5EB4C006FBDA9 /* Build configuration list for PBXNativeTarget "ImagePicker" */ = {
 			isa = XCConfigurationList;
@@ -329,7 +343,7 @@
 				ED48C2EF20A5EB4C006FBDA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

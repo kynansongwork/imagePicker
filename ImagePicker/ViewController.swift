@@ -18,8 +18,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerController.delegate = self
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,10 +46,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //Tells the image to fit to the view.
             imagePickerView.image = pickedImage
         }
-        
         dismiss(animated: true, completion: nil)
         // Dismisses image picker/ modally presented view.
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
