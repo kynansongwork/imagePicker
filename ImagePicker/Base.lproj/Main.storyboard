@@ -87,6 +87,7 @@
                         <outlet property="bottomTextBox" destination="1ef-3g-t8j" id="QKa-JJ-xxU"/>
                         <outlet property="cameraButton" destination="nlX-RN-ap0" id="GtO-9f-z5R"/>
                         <outlet property="imagePickerView" destination="S10-VW-UUA" id="XaS-HU-P97"/>
+                        <outlet property="toolBar" destination="WSt-Qb-cch" id="brv-Nm-8ZZ"/>
                         <outlet property="topTextBox" destination="lAG-fx-HXw" id="JyA-1o-1kN"/>
                     </connections>
                 </viewController>

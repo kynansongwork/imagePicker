@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let pickerController = UIImagePickerController()
     let textViewDelegate = TextViewDelegate()
     
+    @IBOutlet weak var toolBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +103,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @objc func keyboardWillHide(_ notification:Notification) {
         if bottomTextBox.isFirstResponder {
             view.frame.origin.y += getKeyboardHeight(notification)
+            //From point 0 adds or subtracts the height of the keyboard.
         }
     }
     
@@ -109,6 +111,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue //Of a CF Rectangle
         return keyboardSize.cgRectValue.height
+    }
+    
+    //Meme script
+ 
+    func save() {
+        let meme =  Meme(topText: topTextBox.text!, bottomText: bottomTextBox.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        //saves a meme object. memedImage is created by the method.
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        //hide toolbar and navbar
+        
+        toolBar.isHidden = true
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        
+        //show toolbar and navbar
+        toolBar.isHidden = false
+        
+        return memedImage
     }
     
     
