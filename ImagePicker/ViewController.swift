@@ -28,9 +28,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         imagePickerView.contentMode = .scaleAspectFit
         topTextBox.textAlignment = .center
+        topTextBox.defaultTextAttributes = textViewDelegate.textAttributes
         bottomTextBox.textAlignment = .center
-        
-        
+        bottomTextBox.defaultTextAttributes = textViewDelegate.textAttributes
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
