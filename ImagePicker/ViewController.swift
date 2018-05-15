@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextBox: UITextField!
     @IBOutlet weak var bottomTextBox: UITextField!
+    @IBOutlet weak var shareButtonOutlet: UIBarButtonItem!
     
     let pickerController = UIImagePickerController()
     let textViewDelegate = TextViewDelegate()
@@ -47,6 +48,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscibeFromKeyboardNotification()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        shareButtonOutlet.isEnabled = self.imagePickerView.image != nil
+        //disables share button if the image view is empty.
     }
     
     @IBAction func pickImage(_ sender: Any) {
@@ -136,6 +142,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return memedImage
     }
     
+    //share functions
+    
+    @IBAction func shareButton(_ sender: Any) {
+        
+        print("hello")
+
+    }
     
     
     //Learnt from Udacity, http://swiftlylearning.blogspot.co.uk and http://www.codingexplorer.com/choosing-images-with-uiimagepickercontroller-in-swift/

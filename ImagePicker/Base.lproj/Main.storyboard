@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S10-VW-UUA">
-                                <rect key="frame" x="0.0" y="102.5" width="375" height="446.5"/>
+                                <rect key="frame" x="0.0" y="119" width="375" height="436"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSt-Qb-cch">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Zvz-iq-SVe"/>
+                                    <constraint firstAttribute="height" constant="44" id="Zvz-iq-SVe"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Album" id="leA-4Q-Dvw">
@@ -40,7 +40,7 @@
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n93-gj-Ish">
-                                <rect key="frame" x="128" y="42" width="119" height="50"/>
+                                <rect key="frame" x="128" y="58" width="119" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="Tap Here" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="lAG-fx-HXw">
                                         <rect key="frame" x="0.0" y="0.0" width="119" height="50"/>
@@ -55,7 +55,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap Here" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1ef-3g-t8j">
-                                <rect key="frame" x="128" y="551" width="119" height="50"/>
+                                <rect key="frame" x="128" y="557" width="119" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SrX-sH-MsQ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="huK-8m-Zvn"/>
@@ -64,13 +64,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-jR-1dz" userLabel="NavBar">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Aua-VB-06v"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Share" id="DR3-hc-peq">
+                                        <connections>
+                                            <action selector="shareButton:" destination="BYZ-38-t0r" id="GaA-zn-OJL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gG-oK-npG"/>
                             <constraint firstItem="1ef-3g-t8j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4lL-4C-I1L"/>
+                            <constraint firstItem="aPn-jR-1dz" firstAttribute="leading" secondItem="S10-VW-UUA" secondAttribute="leading" id="5Zj-DI-21V"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7mn-X4-MsY"/>
                             <constraint firstItem="n93-gj-Ish" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7qr-ik-Rja"/>
+                            <constraint firstItem="aPn-jR-1dz" firstAttribute="trailing" secondItem="S10-VW-UUA" secondAttribute="trailing" id="AEv-iA-mfR"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="top" secondItem="lAG-fx-HXw" secondAttribute="bottom" constant="11" id="ENK-S4-e7s"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FC8-fr-nEo"/>
                             <constraint firstItem="1ef-3g-t8j" firstAttribute="top" secondItem="S10-VW-UUA" secondAttribute="bottom" constant="2" id="Tcj-TH-pJI"/>
@@ -78,7 +93,8 @@
                             <constraint firstItem="S10-VW-UUA" firstAttribute="top" secondItem="lAG-fx-HXw" secondAttribute="bottom" constant="10.5" id="b47-3i-QpB"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="leading" secondItem="WSt-Qb-cch" secondAttribute="leading" id="cNa-kD-jci"/>
                             <constraint firstItem="WSt-Qb-cch" firstAttribute="top" secondItem="S10-VW-UUA" secondAttribute="bottom" constant="68" id="cRA-JI-r8a"/>
-                            <constraint firstItem="lAG-fx-HXw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="ffZ-4Y-dVy"/>
+                            <constraint firstItem="lAG-fx-HXw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="ffZ-4Y-dVy"/>
+                            <constraint firstItem="aPn-jR-1dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tZW-dk-rS7"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="trailing" secondItem="WSt-Qb-cch" secondAttribute="trailing" id="vHe-wi-GRu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -87,6 +103,7 @@
                         <outlet property="bottomTextBox" destination="1ef-3g-t8j" id="QKa-JJ-xxU"/>
                         <outlet property="cameraButton" destination="nlX-RN-ap0" id="GtO-9f-z5R"/>
                         <outlet property="imagePickerView" destination="S10-VW-UUA" id="XaS-HU-P97"/>
+                        <outlet property="shareButtonOutlet" destination="DR3-hc-peq" id="yvD-QE-Kae"/>
                         <outlet property="toolBar" destination="WSt-Qb-cch" id="brv-Nm-8ZZ"/>
                         <outlet property="topTextBox" destination="lAG-fx-HXw" id="JyA-1o-1kN"/>
                     </connections>
