@@ -40,12 +40,12 @@
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n93-gj-Ish">
-                                <rect key="frame" x="97.5" y="42" width="180" height="50"/>
+                                <rect key="frame" x="128" y="42" width="119" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap Here" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="lAG-fx-HXw">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="Tap Here" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="lAG-fx-HXw">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="AtI-Qg-FBt"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="AtI-Qg-FBt"/>
                                             <constraint firstAttribute="height" constant="50" id="Pnl-V0-Is9"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -55,10 +55,10 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap Here" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="1ef-3g-t8j">
-                                <rect key="frame" x="97.5" y="551" width="180" height="50"/>
+                                <rect key="frame" x="128" y="551" width="119" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SrX-sH-MsQ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="huK-8m-Zvn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="huK-8m-Zvn"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>

@@ -19,11 +19,6 @@ class TextViewDelegate: NSObject, UITextFieldDelegate {
         //If setting foreground colour, the width needs to be negative.
     ]
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        return true
-    }
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
