@@ -20,6 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let textViewDelegate = TextViewDelegate()
     
     @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var navBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,35 +122,53 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //Meme script
  
-    func save() {
-        let meme =  Meme(topText: topTextBox.text!, bottomText: bottomTextBox.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
-        //saves a meme object. memedImage is created by the method.
-    }
     
     func generateMemedImage() -> UIImage {
         
         //hide toolbar and navbar
         
         toolBar.isHidden = true
+        navBar.isHidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         
-        //show toolbar and navbar
+        //show toolbar and navbar after the new image is created
         toolBar.isHidden = false
+        navBar.isHidden = false
         
         return memedImage
+    }
+    
+    func save(memedImage: UIImage) {
+
+        let meme =  Meme(
+            topText: topTextBox.text!,
+            bottomText: bottomTextBox.text!,
+            originalImage: imagePickerView.image!,
+            memedImage: memedImage)
+        //saves a meme object. memedImage is created by the method.
     }
     
     //share functions
     
     @IBAction func shareButton(_ sender: Any) {
+  
+        let image = generateMemedImage()
+        
+        let activityVC = UIActivityViewController(
+        activityItems: [image], applicationActivities: nil)
+        //activity viewController is passed an image, created by the generateMemedImage() function.
+        
+        present(activityVC, animated: true, completion: nil)
+        //presents the activity view controller is presented.
         
         print("hello")
+        
 
     }
-    
+
     
     //Learnt from Udacity, http://swiftlylearning.blogspot.co.uk and http://www.codingexplorer.com/choosing-images-with-uiimagepickercontroller-in-swift/
     

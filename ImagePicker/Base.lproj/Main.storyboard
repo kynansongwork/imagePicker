@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S10-VW-UUA">
-                                <rect key="frame" x="0.0" y="119" width="375" height="436"/>
+                                <rect key="frame" x="0.0" y="131" width="375" height="424"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSt-Qb-cch">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -40,7 +40,7 @@
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n93-gj-Ish">
-                                <rect key="frame" x="128" y="58" width="119" height="50"/>
+                                <rect key="frame" x="128" y="70" width="119" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="Tap Here" textAlignment="center" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="lAG-fx-HXw">
                                         <rect key="frame" x="0.0" y="0.0" width="119" height="50"/>
@@ -88,12 +88,12 @@
                             <constraint firstItem="aPn-jR-1dz" firstAttribute="trailing" secondItem="S10-VW-UUA" secondAttribute="trailing" id="AEv-iA-mfR"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="top" secondItem="lAG-fx-HXw" secondAttribute="bottom" constant="11" id="ENK-S4-e7s"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FC8-fr-nEo"/>
+                            <constraint firstItem="lAG-fx-HXw" firstAttribute="top" secondItem="aPn-jR-1dz" secondAttribute="bottom" constant="6" id="I68-IH-NfT"/>
                             <constraint firstItem="1ef-3g-t8j" firstAttribute="top" secondItem="S10-VW-UUA" secondAttribute="bottom" constant="2" id="Tcj-TH-pJI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WSt-Qb-cch" secondAttribute="bottom" id="UU3-23-mxG"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="top" secondItem="lAG-fx-HXw" secondAttribute="bottom" constant="10.5" id="b47-3i-QpB"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="leading" secondItem="WSt-Qb-cch" secondAttribute="leading" id="cNa-kD-jci"/>
                             <constraint firstItem="WSt-Qb-cch" firstAttribute="top" secondItem="S10-VW-UUA" secondAttribute="bottom" constant="68" id="cRA-JI-r8a"/>
-                            <constraint firstItem="lAG-fx-HXw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="ffZ-4Y-dVy"/>
                             <constraint firstItem="aPn-jR-1dz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tZW-dk-rS7"/>
                             <constraint firstItem="S10-VW-UUA" firstAttribute="trailing" secondItem="WSt-Qb-cch" secondAttribute="trailing" id="vHe-wi-GRu"/>
                         </constraints>
@@ -103,6 +103,7 @@
                         <outlet property="bottomTextBox" destination="1ef-3g-t8j" id="QKa-JJ-xxU"/>
                         <outlet property="cameraButton" destination="nlX-RN-ap0" id="GtO-9f-z5R"/>
                         <outlet property="imagePickerView" destination="S10-VW-UUA" id="XaS-HU-P97"/>
+                        <outlet property="navBar" destination="aPn-jR-1dz" id="A9k-Rt-kpD"/>
                         <outlet property="shareButtonOutlet" destination="DR3-hc-peq" id="yvD-QE-Kae"/>
                         <outlet property="toolBar" destination="WSt-Qb-cch" id="brv-Nm-8ZZ"/>
                         <outlet property="topTextBox" destination="lAG-fx-HXw" id="JyA-1o-1kN"/>

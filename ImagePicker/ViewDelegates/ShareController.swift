@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-class ShareController {
+class ShareController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 }
