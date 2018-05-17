@@ -164,9 +164,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(activityVC, animated: true, completion: nil)
         //presents the activity view controller is presented.
         
-        print("hello")
-        
-
+        activityVC.completionWithItemsHandler = { (_, _, _, _) in
+                self.save(memedImage: image)
+        }
     }
 
     
